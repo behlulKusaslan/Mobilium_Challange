@@ -12,7 +12,47 @@
 		4F8199BB21CB756800264D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8199B921CB756800264D6A /* Main.storyboard */; };
 		4F8199BD21CB756900264D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8199BC21CB756900264D6A /* Assets.xcassets */; };
 		4F8199C021CB756900264D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8199BE21CB756900264D6A /* LaunchScreen.storyboard */; };
+		4F8199F821CB837600264D6A /* NetworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8199F521CB836400264D6A /* NetworkAPI.framework */; };
+		4F8199F921CB837600264D6A /* NetworkAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8199F521CB836400264D6A /* NetworkAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F8199F421CB836400264D6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F8199EF21CB836400264D6A /* NetworkAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F8199D121CB75E600264D6A;
+			remoteInfo = NetworkAPI;
+		};
+		4F8199F621CB836400264D6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F8199EF21CB836400264D6A /* NetworkAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F8199DA21CB75E600264D6A;
+			remoteInfo = NetworkAPITests;
+		};
+		4F8199FA21CB837600264D6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F8199EF21CB836400264D6A /* NetworkAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F8199D021CB75E600264D6A;
+			remoteInfo = NetworkAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F8199FC21CB837700264D6A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4F8199F921CB837600264D6A /* NetworkAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4F8199B221CB756800264D6A /* Mobillium_Behlul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobillium_Behlul.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +62,7 @@
 		4F8199BC21CB756900264D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F8199BF21CB756900264D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F8199C121CB756900264D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F8199EF21CB836400264D6A /* NetworkAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkAPI.xcodeproj; path = ../NetworkAPI/NetworkAPI.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F8199F821CB837600264D6A /* NetworkAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				4F8199B421CB756800264D6A /* Mobillium_Behlul */,
+				4F8199EC21CB82A500264D6A /* Vendor */,
 				4F8199B321CB756800264D6A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +107,23 @@
 			path = Mobillium_Behlul;
 			sourceTree = "<group>";
 		};
+		4F8199EC21CB82A500264D6A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				4F8199EF21CB836400264D6A /* NetworkAPI.xcodeproj */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		4F8199F021CB836400264D6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F8199F521CB836400264D6A /* NetworkAPI.framework */,
+				4F8199F721CB836400264D6A /* NetworkAPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,10 +134,12 @@
 				4F8199AE21CB756800264D6A /* Sources */,
 				4F8199AF21CB756800264D6A /* Frameworks */,
 				4F8199B021CB756800264D6A /* Resources */,
+				4F8199FC21CB837700264D6A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4F8199FB21CB837600264D6A /* PBXTargetDependency */,
 			);
 			name = Mobillium_Behlul;
 			productName = Mobillium_Behlul;
@@ -110,12 +172,35 @@
 			mainGroup = 4F8199A921CB756800264D6A;
 			productRefGroup = 4F8199B321CB756800264D6A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4F8199F021CB836400264D6A /* Products */;
+					ProjectRef = 4F8199EF21CB836400264D6A /* NetworkAPI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4F8199B121CB756800264D6A /* Mobillium_Behlul */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4F8199F521CB836400264D6A /* NetworkAPI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NetworkAPI.framework;
+			remoteRef = 4F8199F421CB836400264D6A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F8199F721CB836400264D6A /* NetworkAPITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetworkAPITests.xctest;
+			remoteRef = 4F8199F621CB836400264D6A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4F8199B021CB756800264D6A /* Resources */ = {
@@ -141,6 +226,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F8199FB21CB837600264D6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NetworkAPI;
+			targetProxy = 4F8199FA21CB837600264D6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4F8199B921CB756800264D6A /* Main.storyboard */ = {
@@ -281,6 +374,7 @@
 		4F8199C521CB756900264D6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QZY3LQ388;
@@ -299,6 +393,7 @@
 		4F8199C621CB756900264D6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QZY3LQ388;
