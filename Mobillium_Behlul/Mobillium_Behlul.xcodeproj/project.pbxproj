@@ -135,6 +135,7 @@
 				4F8199AF21CB756800264D6A /* Frameworks */,
 				4F8199B021CB756800264D6A /* Resources */,
 				4F8199FC21CB837700264D6A /* Embed Frameworks */,
+				4F819A0B21CB879F00264D6A /* Copy Frameworks (Carthage) */,
 			);
 			buildRules = (
 			);
@@ -214,6 +215,33 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F819A0B21CB879F00264D6A /* Copy Frameworks (Carthage) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Result.framework",
+			);
+			name = "Copy Frameworks (Carthage)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Moya.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4F8199AE21CB756800264D6A /* Sources */ = {
