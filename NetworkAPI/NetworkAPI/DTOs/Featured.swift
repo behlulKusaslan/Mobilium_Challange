@@ -13,7 +13,7 @@ public struct Featured: Decodable {
     public let type: String
     public let cover: Cover?
     public let title: String
-    public let subTitle: String?
+    public let subTitle: String
     
     public enum CodingKeys: String, CodingKey {
         case id

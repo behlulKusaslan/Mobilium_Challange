@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DiscoverViewController.swift
 //  Mobillium_Behlul
 //
 //  Created by behlul on 20.12.2018.
@@ -10,23 +10,32 @@ import UIKit
 import NetworkAPI
 import Kingfisher
 
-class ViewController: UIViewController {
+final class DiscoverViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var customView: DiscoverView!
     
     var service = DiscoverService()
-
+    private var featureds: [Featured] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
+        self.customView.setLoading(true)
+        
+        getDiscoverData()
+    }
+    
+    // MARK: - Functions
+    private func getDiscoverData() {
         service.fetchDiscover { [weak self] (result) in
-//            guard let strongSelf = self else { return }
+            guard let strongSelf = self else { return }
             switch result {
             case .success(let value):
                 for result in value.responses {
-                    if let featured = result as? TopFeatured {
-                        print(featured.title)
+                    if let topFeatured = result as? TopFeatured {
+                        print(topFeatured.title)
                         //debugPrint(featured.featured)
+                        strongSelf.featureds = topFeatured.featured
                     }
                     if let products = result as? TopNewProducts {
                         print(products.title)
@@ -46,16 +55,15 @@ class ViewController: UIViewController {
                         print(newShops.title)
                     }
                 }
+                let featuredPresentationsArray = strongSelf.featureds.map(FeaturedPresentation.init)
+                debugPrint(featuredPresentationsArray)
+                let discoverPresentationArray = DiscoverPresentation.init(featureds: featuredPresentationsArray)
+                debugPrint(discoverPresentationArray)
+                strongSelf.customView.updateTableView(discoverPresentationArray)
             case .failure(let error):
                 print(error)
             }
+            self?.customView.setLoading(false)
         }
-        
-        // image
-        let url = URL(string: "https://www.maxpixel.net/static/photo/1x/Fashion-Model-Woman-Clothes-Style-Female-3497401.jpg")!
-        imageView.kf.setImage(with: url)
     }
-
-
 }
-

@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4F2674B621CC2FC500EE4EBC /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2674B521CC2FC500EE4EBC /* Kingfisher.framework */; };
+		4F2674BE21CC346200EE4EBC /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674BD21CC346200EE4EBC /* AppRouter.swift */; };
+		4F2674C021CC34D500EE4EBC /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674BF21CC34D500EE4EBC /* DiscoverView.swift */; };
+		4F2674C221CC351B00EE4EBC /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2674C121CC351B00EE4EBC /* Discover.storyboard */; };
+		4F2674C421CC354300EE4EBC /* DiscoverBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674C321CC354300EE4EBC /* DiscoverBuilder.swift */; };
+		4F2674C621CC355F00EE4EBC /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674C521CC355F00EE4EBC /* DiscoverViewController.swift */; };
+		4F2674C821CC357D00EE4EBC /* DiscoverContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674C721CC357D00EE4EBC /* DiscoverContracts.swift */; };
+		4F2674CD21CC3A9600EE4EBC /* DiscoverPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674CC21CC3A9600EE4EBC /* DiscoverPresentation.swift */; };
+		4F2674CF21CC3ABB00EE4EBC /* FeaturedPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674CE21CC3ABB00EE4EBC /* FeaturedPresentation.swift */; };
+		4F2674D121CC41D500EE4EBC /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674D021CC41D500EE4EBC /* AppContainer.swift */; };
 		4F8199B621CB756800264D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8199B521CB756800264D6A /* AppDelegate.swift */; };
-		4F8199B821CB756800264D6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8199B721CB756800264D6A /* ViewController.swift */; };
-		4F8199BB21CB756800264D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8199B921CB756800264D6A /* Main.storyboard */; };
 		4F8199BD21CB756900264D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8199BC21CB756900264D6A /* Assets.xcassets */; };
 		4F8199C021CB756900264D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8199BE21CB756900264D6A /* LaunchScreen.storyboard */; };
 		4F8199F821CB837600264D6A /* NetworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8199F521CB836400264D6A /* NetworkAPI.framework */; };
@@ -57,10 +64,17 @@
 
 /* Begin PBXFileReference section */
 		4F2674B521CC2FC500EE4EBC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Vendor/Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		4F2674BD21CC346200EE4EBC /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		4F2674BF21CC34D500EE4EBC /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		4F2674C121CC351B00EE4EBC /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		4F2674C321CC354300EE4EBC /* DiscoverBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverBuilder.swift; sourceTree = "<group>"; };
+		4F2674C521CC355F00EE4EBC /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		4F2674C721CC357D00EE4EBC /* DiscoverContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverContracts.swift; sourceTree = "<group>"; };
+		4F2674CC21CC3A9600EE4EBC /* DiscoverPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPresentation.swift; sourceTree = "<group>"; };
+		4F2674CE21CC3ABB00EE4EBC /* FeaturedPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPresentation.swift; sourceTree = "<group>"; };
+		4F2674D021CC41D500EE4EBC /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		4F8199B221CB756800264D6A /* Mobillium_Behlul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobillium_Behlul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8199B521CB756800264D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F8199B721CB756800264D6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4F8199BA21CB756800264D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F8199BC21CB756900264D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F8199BF21CB756900264D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F8199C121CB756900264D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +94,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F2674B821CC33A700EE4EBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F8199BE21CB756900264D6A /* LaunchScreen.storyboard */,
+				4F8199C121CB756900264D6A /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F2674B921CC33BB00EE4EBC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F8199BC21CB756900264D6A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4F2674BA21CC33D300EE4EBC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4F2674C121CC351B00EE4EBC /* Discover.storyboard */,
+				4F2674BF21CC34D500EE4EBC /* DiscoverView.swift */,
+				4F2674C521CC355F00EE4EBC /* DiscoverViewController.swift */,
+				4F2674C321CC354300EE4EBC /* DiscoverBuilder.swift */,
+				4F2674C721CC357D00EE4EBC /* DiscoverContracts.swift */,
+				4F2674CB21CC3A6500EE4EBC /* Presentations */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4F2674BB21CC33E700EE4EBC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4F8199B521CB756800264D6A /* AppDelegate.swift */,
+				4F2674D021CC41D500EE4EBC /* AppContainer.swift */,
+				4F2674BD21CC346200EE4EBC /* AppRouter.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4F2674CB21CC3A6500EE4EBC /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				4F2674CC21CC3A9600EE4EBC /* DiscoverPresentation.swift */,
+				4F2674CE21CC3ABB00EE4EBC /* FeaturedPresentation.swift */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
 		4F8199A921CB756800264D6A = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +163,10 @@
 		4F8199B421CB756800264D6A /* Mobillium_Behlul */ = {
 			isa = PBXGroup;
 			children = (
-				4F8199B521CB756800264D6A /* AppDelegate.swift */,
-				4F8199B721CB756800264D6A /* ViewController.swift */,
-				4F8199B921CB756800264D6A /* Main.storyboard */,
-				4F8199BC21CB756900264D6A /* Assets.xcassets */,
-				4F8199BE21CB756900264D6A /* LaunchScreen.storyboard */,
-				4F8199C121CB756900264D6A /* Info.plist */,
+				4F2674BB21CC33E700EE4EBC /* App */,
+				4F2674BA21CC33D300EE4EBC /* Scenes */,
+				4F2674B921CC33BB00EE4EBC /* Resources */,
+				4F2674B821CC33A700EE4EBC /* Supporting Files */,
 			);
 			path = Mobillium_Behlul;
 			sourceTree = "<group>";
@@ -214,7 +275,7 @@
 			files = (
 				4F8199C021CB756900264D6A /* LaunchScreen.storyboard in Resources */,
 				4F8199BD21CB756900264D6A /* Assets.xcassets in Resources */,
-				4F8199BB21CB756800264D6A /* Main.storyboard in Resources */,
+				4F2674C221CC351B00EE4EBC /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +315,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F8199B821CB756800264D6A /* ViewController.swift in Sources */,
 				4F8199B621CB756800264D6A /* AppDelegate.swift in Sources */,
+				4F2674CD21CC3A9600EE4EBC /* DiscoverPresentation.swift in Sources */,
+				4F2674D121CC41D500EE4EBC /* AppContainer.swift in Sources */,
+				4F2674BE21CC346200EE4EBC /* AppRouter.swift in Sources */,
+				4F2674C621CC355F00EE4EBC /* DiscoverViewController.swift in Sources */,
+				4F2674CF21CC3ABB00EE4EBC /* FeaturedPresentation.swift in Sources */,
+				4F2674C821CC357D00EE4EBC /* DiscoverContracts.swift in Sources */,
+				4F2674C421CC354300EE4EBC /* DiscoverBuilder.swift in Sources */,
+				4F2674C021CC34D500EE4EBC /* DiscoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,14 +338,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4F8199B921CB756800264D6A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F8199BA21CB756800264D6A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4F8199BE21CB756900264D6A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -413,7 +473,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QZY3LQ388;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Vendor/Carthage/Build/iOS/";
-				INFOPLIST_FILE = Mobillium_Behlul/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Mobillium_Behlul/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,7 +493,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QZY3LQ388;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Vendor/Carthage/Build/iOS/";
-				INFOPLIST_FILE = Mobillium_Behlul/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Mobillium_Behlul/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
