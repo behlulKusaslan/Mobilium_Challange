@@ -21,6 +21,7 @@
 		4F0F7CB321CC031800E0E5B3 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7CB221CC031800E0E5B3 /* Collection.swift */; };
 		4F0F7CB521CC041A00E0E5B3 /* TopEditorShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7CB421CC041A00E0E5B3 /* TopEditorShops.swift */; };
 		4F0F7CB721CC051700E0E5B3 /* TopNewShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7CB621CC051700E0E5B3 /* TopNewShops.swift */; };
+		4F0F7CB921CC072F00E0E5B3 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7CB821CC072F00E0E5B3 /* Shop.swift */; };
 		4F8199DB21CB75E600264D6A /* NetworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8199D121CB75E600264D6A /* NetworkAPI.framework */; };
 		4F8199E021CB75E600264D6A /* NetworkAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8199DF21CB75E600264D6A /* NetworkAPITests.swift */; };
 		4F8199E221CB75E600264D6A /* NetworkAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F8199D421CB75E600264D6A /* NetworkAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,6 +75,7 @@
 		4F0F7CB221CC031800E0E5B3 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		4F0F7CB421CC041A00E0E5B3 /* TopEditorShops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEditorShops.swift; sourceTree = "<group>"; };
 		4F0F7CB621CC051700E0E5B3 /* TopNewShops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewShops.swift; sourceTree = "<group>"; };
+		4F0F7CB821CC072F00E0E5B3 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		4F8199D121CB75E600264D6A /* NetworkAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8199D421CB75E600264D6A /* NetworkAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkAPI.h; sourceTree = "<group>"; };
 		4F8199D521CB75E600264D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				4F0F7C9E21CBC66700E0E5B3 /* Featured.swift */,
 				4F0F7CA221CBCC0700E0E5B3 /* Product.swift */,
 				4F0F7CB221CC031800E0E5B3 /* Collection.swift */,
+				4F0F7CB821CC072F00E0E5B3 /* Shop.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				4F8199EE21CB82C700264D6A /* TestClass.swift in Sources */,
 				4F0F7CA721CBCFD000E0E5B3 /* Result.swift in Sources */,
 				4F0F7CA321CBCC0700E0E5B3 /* Product.swift in Sources */,
+				4F0F7CB921CC072F00E0E5B3 /* Shop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
