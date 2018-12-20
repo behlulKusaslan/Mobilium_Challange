@@ -8,8 +8,11 @@
 
 import UIKit
 import NetworkAPI
+import Kingfisher
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var imageView: UIImageView!
     
     var service = DiscoverService()
 
@@ -17,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
      
         service.fetchDiscover { [weak self] (result) in
-            guard let strongSelf = self else { return }
+//            guard let strongSelf = self else { return }
             switch result {
             case .success(let value):
                 for result in value.responses {
@@ -47,6 +50,10 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+        
+        // image
+        let url = URL(string: "https://www.maxpixel.net/static/photo/1x/Fashion-Model-Woman-Clothes-Style-Female-3497401.jpg")!
+        imageView.kf.setImage(with: url)
     }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2674B621CC2FC500EE4EBC /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2674B521CC2FC500EE4EBC /* Kingfisher.framework */; };
 		4F8199B621CB756800264D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8199B521CB756800264D6A /* AppDelegate.swift */; };
 		4F8199B821CB756800264D6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8199B721CB756800264D6A /* ViewController.swift */; };
 		4F8199BB21CB756800264D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8199B921CB756800264D6A /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F2674B521CC2FC500EE4EBC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Vendor/Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		4F8199B221CB756800264D6A /* Mobillium_Behlul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobillium_Behlul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8199B521CB756800264D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F8199B721CB756800264D6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2674B621CC2FC500EE4EBC /* Kingfisher.framework in Frameworks */,
 				4F8199F821CB837600264D6A /* NetworkAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +113,7 @@
 		4F8199EC21CB82A500264D6A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				4F2674B521CC2FC500EE4EBC /* Kingfisher.framework */,
 				4F8199EF21CB836400264D6A /* NetworkAPI.xcodeproj */,
 			);
 			name = Vendor;
@@ -228,6 +232,7 @@
 				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Moya.framework",
 				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Copy Frameworks (Carthage)";
 			outputFileListPaths = (
@@ -236,6 +241,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Moya.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -406,6 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QZY3LQ388;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Vendor/Carthage/Build/iOS/";
 				INFOPLIST_FILE = Mobillium_Behlul/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,6 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QZY3LQ388;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Vendor/Carthage/Build/iOS/";
 				INFOPLIST_FILE = Mobillium_Behlul/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
