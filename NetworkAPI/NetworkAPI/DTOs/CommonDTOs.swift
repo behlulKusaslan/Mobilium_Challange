@@ -11,7 +11,10 @@ import Foundation
 public struct Cover: Decodable {
     public let width: Int
     public let height: Int
-    public let url: URL
+    private let url: URL
+    public var imageUrl : URL {
+        return url.regulateImageUrl()
+    }
     public let medium: Medium
     public let thumbnail: Thumbnail
 }
