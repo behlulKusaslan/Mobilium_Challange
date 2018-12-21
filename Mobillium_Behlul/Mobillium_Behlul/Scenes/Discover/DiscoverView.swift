@@ -40,15 +40,32 @@ extension DiscoverView: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension DiscoverView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = discoverPresentation?.featureds.count else { return 0}
-        return count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        guard let featured = discoverPresentation?.featureds[indexPath.row] else { return cell }
-        cell.textLabel?.text = featured.title
-        cell.detailTextLabel?.text = featured.subtitle
-        return cell
+        switch indexPath.row {
+        case CellType.featured.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FeaturedTableViewCell") as? FeaturedTableViewCell ?? FeaturedTableViewCell()
+            guard let featureds = discoverPresentation?.featureds else { return cell }
+            cell.updateTableViewCell(featureds)
+            return cell
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case CellType.featured.rawValue: return 200
+        default: return 0
+        }
+    }
+}
+
+// Mark: - CellType
+extension DiscoverView {
+    enum CellType: Int {
+        case featured = 0, newProduct, categories, collections, editorShops, newShops
     }
 }
