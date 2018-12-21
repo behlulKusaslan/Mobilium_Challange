@@ -20,8 +20,9 @@ final class DiscoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.customView.setLoading(true)
+        title = "Vitrinova"
         
+        self.customView.setLoading(true)
         getDiscoverData()
     }
     
