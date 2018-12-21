@@ -22,13 +22,19 @@ public struct Cover: Decodable {
 public struct Medium: Decodable {
     public let width: Int
     public let height: Int
-    public let url: URL
+    private let url: URL
+    public var imageUrl : URL {
+        return url.regulateImageUrl()
+    }
 }
 
 public struct Thumbnail: Decodable {
     public let width: Int
     public let height: Int
-    public let url: URL
+    private let url: URL
+    public var imageUrl : URL {
+        return url.regulateImageUrl()
+    }
 }
 
 public struct Category: Decodable {

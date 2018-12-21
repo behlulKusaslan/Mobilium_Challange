@@ -40,7 +40,7 @@ extension DiscoverView: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension DiscoverView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return CellType.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,6 +50,9 @@ extension DiscoverView: UITableViewDataSource {
             guard let featureds = discoverPresentation?.featureds else { return cell }
             cell.updateTableViewCell(featureds)
             return cell
+        case CellType.newProduct.rawValue:
+            return UITableViewCell()
+        // TODO:
         default:
             return UITableViewCell()
         }
@@ -57,7 +60,8 @@ extension DiscoverView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
-        case CellType.featured.rawValue: return 200
+        case CellType.featured.rawValue: return 180
+        case CellType.newProduct.rawValue: return 200
         default: return 0
         }
     }
@@ -65,7 +69,7 @@ extension DiscoverView: UITableViewDataSource {
 
 // Mark: - CellType
 extension DiscoverView {
-    enum CellType: Int {
+    enum CellType: Int, CaseIterable {
         case featured = 0, newProduct, categories, collections, editorShops, newShops
     }
 }

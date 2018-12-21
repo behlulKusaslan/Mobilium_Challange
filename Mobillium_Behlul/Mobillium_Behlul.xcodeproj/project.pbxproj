@@ -22,6 +22,9 @@
 		4F734C3921CD03780005903E /* FeaturedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F734C3821CD03780005903E /* FeaturedTableViewCell.xib */; };
 		4F734C3B21CD08420005903E /* SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F734C3A21CD08420005903E /* SlideView.xib */; };
 		4F734C3D21CD08500005903E /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F734C3C21CD08500005903E /* SlideView.swift */; };
+		4F734C3F21CD11F70005903E /* ProductPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F734C3E21CD11F70005903E /* ProductPresentation.swift */; };
+		4F734C4121CD19BD0005903E /* NewProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F734C4021CD19BD0005903E /* NewProductsTableViewCell.swift */; };
+		4F734C4521CD19FA0005903E /* NewProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F734C4421CD19FA0005903E /* NewProductsTableViewCell.xib */; };
 		4F8199B621CB756800264D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8199B521CB756800264D6A /* AppDelegate.swift */; };
 		4F8199BD21CB756900264D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8199BC21CB756900264D6A /* Assets.xcassets */; };
 		4F8199C021CB756900264D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8199BE21CB756900264D6A /* LaunchScreen.storyboard */; };
@@ -83,6 +86,9 @@
 		4F734C3821CD03780005903E /* FeaturedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedTableViewCell.xib; sourceTree = "<group>"; };
 		4F734C3A21CD08420005903E /* SlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideView.xib; sourceTree = "<group>"; };
 		4F734C3C21CD08500005903E /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
+		4F734C3E21CD11F70005903E /* ProductPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentation.swift; sourceTree = "<group>"; };
+		4F734C4021CD19BD0005903E /* NewProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductsTableViewCell.swift; sourceTree = "<group>"; };
+		4F734C4421CD19FA0005903E /* NewProductsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewProductsTableViewCell.xib; sourceTree = "<group>"; };
 		4F8199B221CB756800264D6A /* Mobillium_Behlul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobillium_Behlul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8199B521CB756800264D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F8199BC21CB756900264D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 			children = (
 				4F2674CC21CC3A9600EE4EBC /* DiscoverPresentation.swift */,
 				4F2674CE21CC3ABB00EE4EBC /* FeaturedPresentation.swift */,
+				4F734C3E21CD11F70005903E /* ProductPresentation.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -181,12 +188,30 @@
 		4F734C3521CD032A0005903E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4F734C4221CD19C30005903E /* Featured */,
+				4F734C4321CD19D90005903E /* NewProduct */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4F734C4221CD19C30005903E /* Featured */ = {
+			isa = PBXGroup;
+			children = (
 				4F734C3621CD03660005903E /* FeaturedTableViewCell.swift */,
 				4F734C3821CD03780005903E /* FeaturedTableViewCell.xib */,
 				4F734C3C21CD08500005903E /* SlideView.swift */,
 				4F734C3A21CD08420005903E /* SlideView.xib */,
 			);
-			path = Cells;
+			path = Featured;
+			sourceTree = "<group>";
+		};
+		4F734C4321CD19D90005903E /* NewProduct */ = {
+			isa = PBXGroup;
+			children = (
+				4F734C4021CD19BD0005903E /* NewProductsTableViewCell.swift */,
+				4F734C4421CD19FA0005903E /* NewProductsTableViewCell.xib */,
+			);
+			path = NewProduct;
 			sourceTree = "<group>";
 		};
 		4F8199A921CB756800264D6A = {
@@ -322,6 +347,7 @@
 			files = (
 				4F8199C021CB756900264D6A /* LaunchScreen.storyboard in Resources */,
 				4F734C3921CD03780005903E /* FeaturedTableViewCell.xib in Resources */,
+				4F734C4521CD19FA0005903E /* NewProductsTableViewCell.xib in Resources */,
 				4F8199BD21CB756900264D6A /* Assets.xcassets in Resources */,
 				4F734C3B21CD08420005903E /* SlideView.xib in Resources */,
 				4F2674C221CC351B00EE4EBC /* Discover.storyboard in Resources */,
@@ -372,7 +398,9 @@
 				4F2674C621CC355F00EE4EBC /* DiscoverViewController.swift in Sources */,
 				4F734C3D21CD08500005903E /* SlideView.swift in Sources */,
 				4F2674CF21CC3ABB00EE4EBC /* FeaturedPresentation.swift in Sources */,
+				4F734C4121CD19BD0005903E /* NewProductsTableViewCell.swift in Sources */,
 				4F2674C821CC357D00EE4EBC /* DiscoverContracts.swift in Sources */,
+				4F734C3F21CD11F70005903E /* ProductPresentation.swift in Sources */,
 				4F734C3421CD03070005903E /* XibLoadable.swift in Sources */,
 				4F2674C421CC354300EE4EBC /* DiscoverBuilder.swift in Sources */,
 				4F2674C021CC34D500EE4EBC /* DiscoverView.swift in Sources */,
