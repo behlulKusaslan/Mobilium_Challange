@@ -10,14 +10,14 @@ import Foundation
 import NetworkAPI
 
 struct FeaturedPresentation {
-    let imageUrl: URL?
+    let imageUrl: URL
     let title: String
     let subtitle: String
 }
 
 extension FeaturedPresentation {
     init(featured: Featured) {
-        let imageUrl = featured.cover?.url
+        let imageUrl = featured.cover.imageUrl
         self.init(imageUrl: imageUrl, title: featured.title, subtitle: featured.subTitle)
     }
 }

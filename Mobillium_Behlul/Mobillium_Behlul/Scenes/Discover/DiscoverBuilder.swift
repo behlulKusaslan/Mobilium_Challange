@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class DiscoverBuilder {
+final public class DiscoverBuilder {
     
     static func make() -> DiscoverViewController {
         let storyBoard = UIStoryboard(name: "Discover", bundle: nil)

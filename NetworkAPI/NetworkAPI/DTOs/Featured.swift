@@ -11,7 +11,7 @@ import Foundation
 public struct Featured: Decodable {
     public let id: Int
     public let type: String
-    public let cover: Cover?
+    public let cover: Cover
     public let title: String
     public let subTitle: String
     

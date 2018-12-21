@@ -114,12 +114,7 @@
 		4F2674BA21CC33D300EE4EBC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				4F2674C121CC351B00EE4EBC /* Discover.storyboard */,
-				4F2674BF21CC34D500EE4EBC /* DiscoverView.swift */,
-				4F2674C521CC355F00EE4EBC /* DiscoverViewController.swift */,
-				4F2674C321CC354300EE4EBC /* DiscoverBuilder.swift */,
-				4F2674C721CC357D00EE4EBC /* DiscoverContracts.swift */,
-				4F2674CB21CC3A6500EE4EBC /* Presentations */,
+				4F734C2B21CCF3590005903E /* Discover */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -141,6 +136,19 @@
 				4F2674CE21CC3ABB00EE4EBC /* FeaturedPresentation.swift */,
 			);
 			path = Presentations;
+			sourceTree = "<group>";
+		};
+		4F734C2B21CCF3590005903E /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				4F2674C121CC351B00EE4EBC /* Discover.storyboard */,
+				4F2674BF21CC34D500EE4EBC /* DiscoverView.swift */,
+				4F2674C521CC355F00EE4EBC /* DiscoverViewController.swift */,
+				4F2674C321CC354300EE4EBC /* DiscoverBuilder.swift */,
+				4F2674C721CC357D00EE4EBC /* DiscoverContracts.swift */,
+				4F2674CB21CC3A6500EE4EBC /* Presentations */,
+			);
+			path = Discover;
 			sourceTree = "<group>";
 		};
 		4F8199A921CB756800264D6A = {
