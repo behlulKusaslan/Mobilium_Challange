@@ -17,6 +17,8 @@
 		4F2674CD21CC3A9600EE4EBC /* DiscoverPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674CC21CC3A9600EE4EBC /* DiscoverPresentation.swift */; };
 		4F2674CF21CC3ABB00EE4EBC /* FeaturedPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674CE21CC3ABB00EE4EBC /* FeaturedPresentation.swift */; };
 		4F2674D121CC41D500EE4EBC /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674D021CC41D500EE4EBC /* AppContainer.swift */; };
+		4F5252C621CEA37E0057ED61 /* NewProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5252C421CEA37E0057ED61 /* NewProductsCollectionViewCell.swift */; };
+		4F5252C721CEA37E0057ED61 /* NewProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5252C521CEA37E0057ED61 /* NewProductsCollectionViewCell.xib */; };
 		4F734C3421CD03070005903E /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F734C3321CD03070005903E /* XibLoadable.swift */; };
 		4F734C3721CD03660005903E /* FeaturedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F734C3621CD03660005903E /* FeaturedTableViewCell.swift */; };
 		4F734C3921CD03780005903E /* FeaturedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F734C3821CD03780005903E /* FeaturedTableViewCell.xib */; };
@@ -81,6 +83,8 @@
 		4F2674CC21CC3A9600EE4EBC /* DiscoverPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPresentation.swift; sourceTree = "<group>"; };
 		4F2674CE21CC3ABB00EE4EBC /* FeaturedPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPresentation.swift; sourceTree = "<group>"; };
 		4F2674D021CC41D500EE4EBC /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		4F5252C421CEA37E0057ED61 /* NewProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F5252C521CEA37E0057ED61 /* NewProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewProductsCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F734C3321CD03070005903E /* XibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
 		4F734C3621CD03660005903E /* FeaturedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewCell.swift; sourceTree = "<group>"; };
 		4F734C3821CD03780005903E /* FeaturedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedTableViewCell.xib; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 			children = (
 				4F734C4021CD19BD0005903E /* NewProductsTableViewCell.swift */,
 				4F734C4421CD19FA0005903E /* NewProductsTableViewCell.xib */,
+				4F5252C421CEA37E0057ED61 /* NewProductsCollectionViewCell.swift */,
+				4F5252C521CEA37E0057ED61 /* NewProductsCollectionViewCell.xib */,
 			);
 			path = NewProduct;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 				4F8199C021CB756900264D6A /* LaunchScreen.storyboard in Resources */,
 				4F734C3921CD03780005903E /* FeaturedTableViewCell.xib in Resources */,
 				4F734C4521CD19FA0005903E /* NewProductsTableViewCell.xib in Resources */,
+				4F5252C721CEA37E0057ED61 /* NewProductsCollectionViewCell.xib in Resources */,
 				4F8199BD21CB756900264D6A /* Assets.xcassets in Resources */,
 				4F734C3B21CD08420005903E /* SlideView.xib in Resources */,
 				4F2674C221CC351B00EE4EBC /* Discover.storyboard in Resources */,
@@ -393,6 +400,7 @@
 				4F734C3721CD03660005903E /* FeaturedTableViewCell.swift in Sources */,
 				4F8199B621CB756800264D6A /* AppDelegate.swift in Sources */,
 				4F2674CD21CC3A9600EE4EBC /* DiscoverPresentation.swift in Sources */,
+				4F5252C621CEA37E0057ED61 /* NewProductsCollectionViewCell.swift in Sources */,
 				4F2674D121CC41D500EE4EBC /* AppContainer.swift in Sources */,
 				4F2674BE21CC346200EE4EBC /* AppRouter.swift in Sources */,
 				4F2674C621CC355F00EE4EBC /* DiscoverViewController.swift in Sources */,

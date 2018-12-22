@@ -51,7 +51,9 @@ extension DiscoverView: UITableViewDataSource {
             cell.updateTableViewCell(featureds)
             return cell
         case CellType.newProduct.rawValue:
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NewProductsTableViewCell") as? NewProductsTableViewCell ?? NewProductsTableViewCell()
+            // TODO: configure
+            return cell
         // TODO:
         default:
             return UITableViewCell()
@@ -61,7 +63,7 @@ extension DiscoverView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case CellType.featured.rawValue: return 180
-        case CellType.newProduct.rawValue: return 200
+        case CellType.newProduct.rawValue: return 150
         default: return 0
         }
     }
