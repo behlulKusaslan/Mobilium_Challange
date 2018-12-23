@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class EditorShopsTableViewCell: UITableViewCell, XibLoadable {
     
     // Outlets
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var sectionTitle: UILabel!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     // Values
     fileprivate var editorShops: [EditorShopPresentation] = []
@@ -67,6 +69,9 @@ extension EditorShopsTableViewCell: EditorShopsTableViewCellProtocol {
     func updaetTableView(_ editorShops: [EditorShopPresentation], title: String) {
         self.sectionTitle.text = title
         self.editorShops = editorShops
+        if let backgroundImageUrl = editorShops.first?.backgroundImage {
+            self.backgroundImageView.kf.setImage(with: backgroundImageUrl)
+        }
         self.collectionView?.reloadData()
     }
 }
@@ -80,6 +85,8 @@ extension EditorShopsTableViewCell: UICollectionViewDelegate {
         let indexOfMajorCell = self.indexOfMajorCell()
         let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
         collectionViewFlowLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        let backgroundImageUrl = editorShops[indexPath.row].backgroundImage
+        self.backgroundImageView.kf.setImage(with: backgroundImageUrl)
     }
 }
 

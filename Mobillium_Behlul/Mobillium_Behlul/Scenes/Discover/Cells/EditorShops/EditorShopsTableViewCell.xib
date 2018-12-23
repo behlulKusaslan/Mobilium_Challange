@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditorShopsTableViewCell" customModule="Mobillium_Behlul" customModuleProvider="target">
             <connections>
-                <outlet property="backgroundView" destination="OWc-bX-aYi" id="3MC-xK-akN"/>
+                <outlet property="backgroundImageView" destination="OWc-bX-aYi" id="AeC-Pg-c6Y"/>
                 <outlet property="collectionView" destination="Sf3-wz-Ltw" id="740-Ik-g2c"/>
                 <outlet property="sectionTitle" destination="QoE-Lv-z5s" id="c67-vD-wFa"/>
             </connections>
@@ -25,7 +25,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWc-bX-aYi">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                 </imageView>
-                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-P8-rsq">
+                <visualEffectView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-P8-rsq">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zK5-vi-huP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -45,7 +45,7 @@
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Sf3-wz-Ltw">
                     <rect key="frame" x="0.0" y="31" width="375" height="169"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r3J-KT-ekX">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
