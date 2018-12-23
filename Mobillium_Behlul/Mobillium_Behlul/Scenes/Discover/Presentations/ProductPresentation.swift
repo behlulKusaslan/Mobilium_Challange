@@ -19,7 +19,7 @@ struct ProductPresentation {
 extension ProductPresentation {
     init(product: Product) {
         self.init(
-            imageUrl: product.shop.cover.medium.imageUrl,
+            imageUrl: product.images.first?.imageUrl ?? URL(string: "")!,
             title: product.title,
             subtitle: product.shop.name,
             price: product.priceString)

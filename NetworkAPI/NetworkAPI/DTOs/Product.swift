@@ -17,7 +17,7 @@ public struct Product: Decodable {
     public let definition: String?
     public let difference: String?
     public let id: Int?
-    public let images: [Image]?
+    public let images: [Image]
     public let isActive: Bool?
     public let isApproved: Bool?
     public let isCargoFree: Bool?
@@ -69,7 +69,10 @@ public struct Image: Decodable {
     let height : Int?
     let medium : Medium?
     let thumbnail : Thumbnail?
-    let url : String?
+    private let url: URL
+    public var imageUrl : URL {
+        return url.regulateImageUrl()
+    }
     let width : Int?
 }
 

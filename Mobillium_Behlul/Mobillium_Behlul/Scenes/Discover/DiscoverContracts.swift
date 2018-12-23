@@ -16,3 +16,7 @@ protocol DiscoverViewProtocol {
 protocol FeaturedTableViewCellProtocol {
     func updateTableViewCell(_ featureds: [FeaturedPresentation])
 }
+
+protocol NewProductsTableViewCellProtocol {
+    func updateTableViewCell(_ products: [ProductPresentation], title: String)
+}
