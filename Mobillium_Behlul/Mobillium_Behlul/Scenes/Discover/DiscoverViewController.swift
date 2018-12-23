@@ -18,8 +18,10 @@ final class DiscoverViewController: UIViewController {
     // Proporties
     var service = DiscoverService()
     private var featureds: [Featured] = []
-    private var productTitle: String = ""
+    private var productsTitle: String = ""
     private var products: [Product] = []
+    private var categories: [ShopCategory] = []
+    private var categoriesTitle: String = ""
     
     // Mark: - Lifecycle
     override func viewDidLoad() {
@@ -39,18 +41,15 @@ final class DiscoverViewController: UIViewController {
             case .success(let value):
                 for result in value.responses {
                     if let topFeatured = result as? TopFeatured {
-                        print(topFeatured.title)
-                        //debugPrint(featured.featured)
                         strongSelf.featureds = topFeatured.featured
                     }
                     if let products = result as? TopNewProducts {
-                        print(products.title)
-                        strongSelf.productTitle = products.title
+                        strongSelf.productsTitle = products.title
                         strongSelf.products = products.products
                     }
                     if let categories = result as? TopCategories {
-                        print(categories.title)
-                        //debugPrint(categories.categories)
+                        strongSelf.categoriesTitle = categories.title
+                        strongSelf.categories = categories.categories
                     }
                     if let collections = result as? TopCollections {
                         print(collections.title)
@@ -74,12 +73,15 @@ final class DiscoverViewController: UIViewController {
         // Set presentations
         let featuredPresentationsArray = self.featureds.map(FeaturedPresentation.init)
         let productPresentationsArray = self.products.map(ProductPresentation.init)
+        let categoriesPresentationArray = self.categories.map(CategoryPresentation.init)
         
         // create base presentation
         let discoverPresentationArray = DiscoverPresentation.init(
             featureds: featuredPresentationsArray,
-            productTitle: productTitle,
-            products: productPresentationsArray)
+            productTitle: productsTitle,
+            products: productPresentationsArray,
+            categoriesTitle: categoriesTitle,
+            categories: categoriesPresentationArray)
         
         self.customView.updateTableView(discoverPresentationArray)
     }

@@ -20,3 +20,7 @@ protocol FeaturedTableViewCellProtocol {
 protocol NewProductsTableViewCellProtocol {
     func updateTableViewCell(_ products: [ProductPresentation], title: String)
 }
+
+protocol CategoryTableViewCellProtocol {
+    func updateTableView(_ categories: [CategoryPresentation], title: String)
+}

@@ -10,7 +10,7 @@ import Foundation
 
 public struct Product: Decodable {
     public let cargoTime: Int?
-    public let category: Category?
+    public let category: ShopCategory?
     public let categoryId: Int?
     public let commentCount: Int?
     public let commissionRate: Int?
@@ -66,20 +66,20 @@ public struct Product: Decodable {
 }
 
 public struct Image: Decodable {
-    let height : Int?
-    let medium : Medium?
-    let thumbnail : Thumbnail?
+    public let height : Int?
+    public let medium : Medium?
+    public let thumbnail : Thumbnail?
     private let url: URL
     public var imageUrl : URL {
         return url.regulateImageUrl()
     }
-    let width : Int?
+    public let width : Int?
 }
 
 public struct Logo: Decodable {
-    let height : Int?
-    let medium : Medium?
-    let thumbnail : Thumbnail?
-    let url : String?
-    let width : Int?
+    public let height : Int?
+    public let medium : Medium
+    public let thumbnail : Thumbnail?
+    public let url : String?
+    public let width : Int?
 }

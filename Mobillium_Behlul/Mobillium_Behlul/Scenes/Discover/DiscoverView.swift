@@ -56,6 +56,12 @@ extension DiscoverView: UITableViewDataSource {
             guard let title = discoverPresentation?.productTitle else { return cell }
             cell.updateTableViewCell(products, title: title)
             return cell
+        case CellType.categories.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell") as? CategoriesTableViewCell ?? CategoriesTableViewCell()
+            guard let categories = discoverPresentation?.categories else { return cell }
+            guard let title = discoverPresentation?.categoriesTitle else { return cell }
+            cell.updateTableView(categories, title: title)
+            return cell
         // TODO:
         default:
             return UITableViewCell()
@@ -66,6 +72,7 @@ extension DiscoverView: UITableViewDataSource {
         switch indexPath.row {
         case CellType.featured.rawValue: return 150
         case CellType.newProduct.rawValue: return 230
+        case CellType.categories.rawValue: return 115
         default: return 0
         }
     }

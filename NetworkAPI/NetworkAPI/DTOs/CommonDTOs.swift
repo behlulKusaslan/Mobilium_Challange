@@ -37,12 +37,14 @@ public struct Thumbnail: Decodable {
     }
 }
 
-public struct Category: Decodable {
-    let id : Int
-    let name : String
-    let order : Int?
-    let parentCategory : ParentCategory?
-    let parentId : Int?
+public struct ShopCategory: Decodable {
+    public let id : Int
+    public let name : String
+    public let order : Int?
+    public let parentCategory : ParentCategory?
+    public let parentId : Int?
+    public let logo: Logo?
+    public let cover: Cover?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -50,11 +52,13 @@ public struct Category: Decodable {
         case order
         case parentCategory = "parent_category"
         case parentId = "parent_id"
+        case logo
+        case cover
     }
 }
 
 public struct ParentCategory: Decodable {
-    let id : Int?
-    let name : String?
-    let order : Int?
+    public let id : Int?
+    public let name : String?
+    public let order : Int?
 }
