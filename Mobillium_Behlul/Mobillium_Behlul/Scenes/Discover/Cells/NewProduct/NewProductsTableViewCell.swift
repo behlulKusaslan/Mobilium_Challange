@@ -68,10 +68,7 @@ extension NewProductsTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewProductsCollectionViewCell", for: indexPath) as? NewProductsCollectionViewCell ?? NewProductsCollectionViewCell()
-        let productPresentation = products[indexPath.row]
-        cell.configureCell(with: productPresentation)
-        return cell
+        return NewProductsCollectionViewCellBuilder.make(with: products, for: collectionView, indexPath: indexPath)
     }
 }
 

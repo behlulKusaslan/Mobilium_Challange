@@ -67,10 +67,7 @@ extension CollectionsTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionsCollectionViewCell", for: indexPath) as? CollectionsCollectionViewCell ?? CollectionsCollectionViewCell()
-        let collectionPresentation = collections[indexPath.row]
-        cell.configureCell(with: collectionPresentation)
-        return cell
+        return CollectionsCollectionViewCellBuilder.make(with: collections, for: collectionView, indexPath: indexPath)
     }
 }
 

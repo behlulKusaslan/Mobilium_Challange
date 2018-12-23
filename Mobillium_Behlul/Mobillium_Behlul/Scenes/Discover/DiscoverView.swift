@@ -46,28 +46,13 @@ extension DiscoverView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case CellType.featured.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FeaturedTableViewCell") as? FeaturedTableViewCell ?? FeaturedTableViewCell()
-            guard let featureds = discoverPresentation?.featureds else { return cell }
-            cell.updateTableViewCell(featureds)
-            return cell
+            return FeaturedTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
         case CellType.newProduct.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NewProductsTableViewCell") as? NewProductsTableViewCell ?? NewProductsTableViewCell()
-            guard let products = discoverPresentation?.products else { return cell }
-            guard let title = discoverPresentation?.productTitle else { return cell }
-            cell.updateTableViewCell(products, title: title)
-            return cell
+            return NewProductsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
         case CellType.categories.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell") as? CategoriesTableViewCell ?? CategoriesTableViewCell()
-            guard let categories = discoverPresentation?.categories else { return cell }
-            guard let title = discoverPresentation?.categoriesTitle else { return cell }
-            cell.updateTableView(categories, title: title)
-            return cell
+            return CategoriesTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
         case CellType.collections.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionsTableViewCell") as? CollectionsTableViewCell ?? CollectionsTableViewCell()
-            guard let collections = discoverPresentation?.collections else { return cell }
-            guard let title = discoverPresentation?.categoriesTitle else { return cell }
-            cell.updaetTableView(collections, title: title)
-            return cell
+            return CollectionsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
         // TODO:
         default:
             return UITableViewCell()
