@@ -19,6 +19,8 @@ final class EditorShopsTableViewCell: UITableViewCell, XibLoadable {
     // Values
     fileprivate var editorShops: [EditorShopPresentation] = []
     
+    weak var delegate: DiscoverViewDelegate?
+    
     //
     private var indexOfCellBeforeDragging = 0
     private var collectionViewFlowLayout: UICollectionViewFlowLayout {
@@ -63,6 +65,11 @@ final class EditorShopsTableViewCell: UITableViewCell, XibLoadable {
         let safeIndex = max(0, min(numberOfItems - 1, index))
         return safeIndex
     }
+    
+    @IBAction func allButtonTapped(_ sender: UIButton) {
+        delegate?.didSelectAll(state: DiscoverDetailView.State.editorShops(editorShops))
+    }
+    
 }
 
 extension EditorShopsTableViewCell: EditorShopsTableViewCellProtocol {

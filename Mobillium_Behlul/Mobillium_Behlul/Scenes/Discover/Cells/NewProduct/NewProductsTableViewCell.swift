@@ -16,6 +16,7 @@ final class NewProductsTableViewCell: UITableViewCell, XibLoadable {
     
     // variables
     fileprivate var products: [ProductPresentation] = []
+    weak var delegate: DiscoverViewDelegate?
     
     // MARK: - Lifecycle
     override func awakeFromNib() {
@@ -44,6 +45,10 @@ final class NewProductsTableViewCell: UITableViewCell, XibLoadable {
         collectionView?.delegate = self
         let nib = UINib(nibName: "NewProductsCollectionViewCell", bundle: nil)
         collectionView?.register(nib, forCellWithReuseIdentifier: "NewProductsCollectionViewCell")
+    }
+    
+    @IBAction func allButtonTapped(_ sender: UIButton) {
+        delegate?.didSelectAll(state: DiscoverDetailView.State.newProduct(products))
     }
     
 }

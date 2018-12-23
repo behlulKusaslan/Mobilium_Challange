@@ -13,7 +13,11 @@ import Kingfisher
 final class DiscoverViewController: UIViewController {
     
     // Outlets
-    @IBOutlet weak var customView: DiscoverView!
+    @IBOutlet weak var customView: DiscoverView! {
+        didSet {
+            customView.delegate = self
+        }
+    }
     
     // Proporties
     var service = DiscoverService()
@@ -97,5 +101,13 @@ final class DiscoverViewController: UIViewController {
             editorShops: editorShopsPresentationArray)
         
         self.customView.updateTableView(discoverPresentationArray)
+    }
+}
+
+// MARK: - DiscoverViewControllerDelegate
+extension DiscoverViewController: DiscoverViewControllerDelegate {
+    func goToDetailView(with state: DiscoverDetailView.State) {
+        let viewController = DiscoverDetailBuilder.make(with: state)
+        show(viewController, sender: nil)
     }
 }

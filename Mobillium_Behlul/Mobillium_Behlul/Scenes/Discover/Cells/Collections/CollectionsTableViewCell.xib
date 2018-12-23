@@ -28,11 +28,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udD-TL-oBl">
-                    <rect key="frame" x="313" y="0.0" width="46" height="30"/>
+                    <rect key="frame" x="320" y="0.0" width="39" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Fvn-Qm-ZBt"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Tümü">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="allButtonTapped:" destination="-1" eventType="touchUpInside" id="mIW-ie-Nwh"/>
+                    </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lJ9-Bu-oIf">
                     <rect key="frame" x="0.0" y="31" width="375" height="119"/>

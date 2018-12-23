@@ -40,8 +40,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeT-eb-zCN">
-                    <rect key="frame" x="313" y="0.0" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="320" y="0.0" width="39" height="30"/>
+                    <state key="normal" title="Tümü">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="allButtonTapped:" destination="-1" eventType="touchUpInside" id="GuI-xh-zNC"/>
+                    </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Sf3-wz-Ltw">
                     <rect key="frame" x="0.0" y="31" width="375" height="169"/>

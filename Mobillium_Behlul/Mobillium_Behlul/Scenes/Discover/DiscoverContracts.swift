@@ -13,6 +13,14 @@ protocol DiscoverViewProtocol {
     func setLoading(_ isloading: Bool)
 }
 
+protocol DiscoverViewDelegate: class {
+    func didSelectAll(state: DiscoverDetailView.State)
+}
+
+protocol DiscoverViewControllerDelegate: class {
+    func goToDetailView(with state: DiscoverDetailView.State)
+}
+
 protocol FeaturedTableViewCellProtocol {
     func updateTableViewCell(_ featureds: [FeaturedPresentation])
 }

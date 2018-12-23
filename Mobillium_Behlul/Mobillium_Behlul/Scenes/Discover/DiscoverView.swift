@@ -16,6 +16,8 @@ final class DiscoverView: UIView {
     // Variables
     private var discoverPresentation: DiscoverPresentation?
     
+    weak var delegate: DiscoverViewControllerDelegate?
+    
 }
 
 // MARK: - DiscoverViewProtocol
@@ -48,14 +50,19 @@ extension DiscoverView: UITableViewDataSource {
         case CellType.featured.rawValue:
             return FeaturedTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
         case CellType.newProduct.rawValue:
-            return NewProductsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
+            let cell = NewProductsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
+            cell.delegate = self
+            return cell
         case CellType.categories.rawValue:
             return CategoriesTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
         case CellType.collections.rawValue:
-            return CollectionsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
+            let cell = CollectionsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
+            cell.delegate = self
+            return cell
         case CellType.editorShops.rawValue:
-            return EditorShopsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
-        // TODO:
+            let cell = EditorShopsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
+            cell.delegate = self
+            return cell
         default:
             return UITableViewCell()
         }
@@ -77,5 +84,12 @@ extension DiscoverView: UITableViewDataSource {
 extension DiscoverView {
     enum CellType: Int, CaseIterable {
         case featured = 0, newProduct, categories, collections, editorShops, newShops
+    }
+}
+
+// MARK: - DiscoverViewDelegate
+extension DiscoverView: DiscoverViewDelegate {
+    func didSelectAll(state: DiscoverDetailView.State) {
+        delegate?.goToDetailView(with: state)
     }
 }
