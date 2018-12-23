@@ -17,6 +17,8 @@ final class CollectionsTableViewCell: UITableViewCell, XibLoadable {
     // Values
     fileprivate var collections: [CollectionPresentation] = []
     
+    weak var delegate: DiscoverViewDelegate?
+    
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,8 +47,14 @@ final class CollectionsTableViewCell: UITableViewCell, XibLoadable {
         let nib = UINib(nibName: "CollectionsCollectionViewCell", bundle: nil)
         collectionView?.register(nib, forCellWithReuseIdentifier: "CollectionsCollectionViewCell")
     }
+    
+    // MARK: - IBAction
+    @IBAction func allButtonTapped(_ sender: UIButton) {
+        delegate?.didSelectAll(state: DiscoverDetailView.State.collection(collections))
+    }
 }
 
+// MARK: - CollectionsTableViewCellProtocol
 extension CollectionsTableViewCell: CollectionsTableViewCellProtocol {
     func updaetTableView(_ collections: [CollectionPresentation], title: String) {
         self.collections = collections

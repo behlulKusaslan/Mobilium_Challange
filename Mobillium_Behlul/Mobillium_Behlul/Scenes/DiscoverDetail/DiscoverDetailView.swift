@@ -31,8 +31,20 @@ final class DiscoverDetailView: UIView {
     private func setUpCell() {
         collectionView?.dataSource = self
         collectionView?.delegate = self
-        let nib = UINib(nibName: "NewProductsCollectionViewCell", bundle: nil)
-        collectionView?.register(nib, forCellWithReuseIdentifier: "NewProductsCollectionViewCell")
+        switch self.state {
+        case .newProduct(_):
+            let nib = UINib(nibName: "NewProductsCollectionViewCell", bundle: nil)
+            collectionView?.register(nib, forCellWithReuseIdentifier: "NewProductsCollectionViewCell")
+        case .collection(_):
+            let nib = UINib(nibName: "CollectionsCollectionViewCell", bundle: nil)
+            collectionView?.register(nib, forCellWithReuseIdentifier: "CollectionsCollectionViewCell")
+        case .editorShops(_):
+            let nib = UINib(nibName: "EditorShopsCollectionViewCell", bundle: nil)
+            collectionView?.register(nib, forCellWithReuseIdentifier: "EditorShopsCollectionViewCell")
+        default:
+            print("No cell")
+        }
+        
     }
     
 }
@@ -58,8 +70,10 @@ extension DiscoverDetailView: UICollectionViewDataSource {
         case .empty: return UICollectionViewCell()
         case .newProduct(let newProducts):
             return NewProductsCollectionViewCellBuilder.make(with: newProducts, for: collectionView, indexPath: indexPath)
-        default:
-            return UICollectionViewCell()
+        case .collection(let collections):
+            return CollectionsCollectionViewCellBuilder.make(with: collections, for: collectionView, indexPath: indexPath)
+        case .editorShops(let editorShops):
+            return EditorShopsCollectionViewCellBuilder.make(with: editorShops, for: collectionView, indexPath: indexPath)
         }
     }
 }
@@ -67,8 +81,15 @@ extension DiscoverDetailView: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension DiscoverDetailView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = roundf(Float((self.frame.size.width - 40) / 2))
-        return CGSize(width: CGFloat(width), height: 300)
+        switch self.state {
+        case .empty:
+            return CGSize(width: 0, height: 0)
+        case .newProduct(_):
+            let width = roundf(Float((self.frame.size.width - 40) / 2))
+            return CGSize(width: CGFloat(width), height: 300)
+        case .collection(_), .editorShops(_):
+            return CGSize(width: self.frame.size.width - 20, height: 200)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -80,6 +101,7 @@ extension DiscoverDetailView: UICollectionViewDelegateFlowLayout {
 extension DiscoverDetailView: DiscoverDetailViewProtocol {
     func updateCollectionView(_ state: DiscoverDetailView.State) {
         self.state = state
+        self.setUpCell()
         self.collectionView.reloadData()
     }
 }

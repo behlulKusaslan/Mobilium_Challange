@@ -56,10 +56,13 @@ extension DiscoverView: UITableViewDataSource {
         case CellType.categories.rawValue:
             return CategoriesTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
         case CellType.collections.rawValue:
-            return CollectionsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
+            let cell = CollectionsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
+            cell.delegate = self
+            return cell
         case CellType.editorShops.rawValue:
-            return EditorShopsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
-        // TODO:
+            let cell = EditorShopsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
+            cell.delegate = self
+            return cell
         default:
             return UITableViewCell()
         }
