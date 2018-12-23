@@ -10,4 +10,6 @@ import Foundation
 
 struct DiscoverPresentation {
     let featureds: [FeaturedPresentation]
+    let productTitle: String
+    let products: [ProductPresentation]
 }

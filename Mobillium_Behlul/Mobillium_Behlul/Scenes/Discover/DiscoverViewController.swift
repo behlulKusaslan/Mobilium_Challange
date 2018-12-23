@@ -12,16 +12,22 @@ import Kingfisher
 
 final class DiscoverViewController: UIViewController {
     
+    // Outlets
     @IBOutlet weak var customView: DiscoverView!
     
+    // Proporties
     var service = DiscoverService()
     private var featureds: [Featured] = []
+    private var productTitle: String = ""
+    private var products: [Product] = []
     
+    // Mark: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.customView.setLoading(true)
+        title = "Vitrinova"
         
+        self.customView.setLoading(true)
         getDiscoverData()
     }
     
@@ -39,7 +45,8 @@ final class DiscoverViewController: UIViewController {
                     }
                     if let products = result as? TopNewProducts {
                         print(products.title)
-                        //debugPrint(products.products)
+                        strongSelf.productTitle = products.title
+                        strongSelf.products = products.products
                     }
                     if let categories = result as? TopCategories {
                         print(categories.title)
@@ -55,15 +62,25 @@ final class DiscoverViewController: UIViewController {
                         print(newShops.title)
                     }
                 }
-                let featuredPresentationsArray = strongSelf.featureds.map(FeaturedPresentation.init)
-                debugPrint(featuredPresentationsArray)
-                let discoverPresentationArray = DiscoverPresentation.init(featureds: featuredPresentationsArray)
-                debugPrint(discoverPresentationArray)
-                strongSelf.customView.updateTableView(discoverPresentationArray)
+                strongSelf.updateView()
             case .failure(let error):
                 print(error)
             }
             self?.customView.setLoading(false)
         }
+    }
+    
+    private func updateView() {
+        // Set presentations
+        let featuredPresentationsArray = self.featureds.map(FeaturedPresentation.init)
+        let productPresentationsArray = self.products.map(ProductPresentation.init)
+        
+        // create base presentation
+        let discoverPresentationArray = DiscoverPresentation.init(
+            featureds: featuredPresentationsArray,
+            productTitle: productTitle,
+            products: productPresentationsArray)
+        
+        self.customView.updateTableView(discoverPresentationArray)
     }
 }

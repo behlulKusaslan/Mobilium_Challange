@@ -12,3 +12,11 @@ protocol DiscoverViewProtocol {
     func updateTableView(_ discoverPresentation: DiscoverPresentation)
     func setLoading(_ isloading: Bool)
 }
+
+protocol FeaturedTableViewCellProtocol {
+    func updateTableViewCell(_ featureds: [FeaturedPresentation])
+}
+
+protocol NewProductsTableViewCellProtocol {
+    func updateTableViewCell(_ products: [ProductPresentation], title: String)
+}

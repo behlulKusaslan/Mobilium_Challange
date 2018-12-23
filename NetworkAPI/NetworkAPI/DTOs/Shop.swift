@@ -9,23 +9,23 @@
 import Foundation
 
 public struct Shop: Decodable {
-    let commentCount : Int?
-    let cover : Cover?
-    let createdAt : String?
-    let definition : String?
-    let followerCount : Int?
-    let id : Int?
-    let isEditorChoice : Bool?
-    let isFollowing : Bool?
-    let logo : Logo?
-    let name : String?
-    let nameUpdateable : Bool?
-    let productCount : Int?
-    let shareUrl : String?
-    let shopPaymentId : Int?
-    let shopRate : Int?
-    let slug : String?
-    let vacationMode : Int?
+    public let commentCount : Int?
+    public let cover : Cover
+    public let createdAt : String?
+    public let definition : String?
+    public let followerCount : Int?
+    public let id : Int?
+    public let isEditorChoice : Bool?
+    public let isFollowing : Bool?
+    public let logo : Logo?
+    public let name : String
+    public let nameUpdateable : Bool?
+    public let productCount : Int?
+    public let shareUrl : String?
+    public let shopPaymentId : Int?
+    public let shopRate : Int?
+    public let slug : String?
+    public let vacationMode : Int?
     
     enum CodingKeys: String, CodingKey {
         case commentCount = "comment_count"

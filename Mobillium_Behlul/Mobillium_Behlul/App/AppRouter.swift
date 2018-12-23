@@ -18,10 +18,18 @@ final class AppRouter {
     
     func start() {
         let viewController = DiscoverBuilder.make()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        var navigationController = UINavigationController(rootViewController: viewController)
+        navigationController = setUpNavigationBarStyle(for: navigationController)
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+    }
+    
+    private func setUpNavigationBarStyle(for navigationController: UINavigationController) -> UINavigationController {
+        navigationController.navigationBar.barTintColor = UIColor.orange
+        navigationController.navigationBar.barStyle = .black
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        return navigationController
     }
     
 }

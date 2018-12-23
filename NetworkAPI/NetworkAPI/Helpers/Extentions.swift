@@ -9,16 +9,6 @@
 import Foundation
 
 extension URL {
-    mutating func regulateImage() {
-        var stringUrl = self.absoluteString
-        stringUrl = stringUrl.replacingOccurrences(of: "\\/", with: "/")
-        if let regulatedUrl = URL(string: stringUrl) {
-            self = regulatedUrl
-        } else {
-            // Should add fix url
-        }
-    }
-    
     func regulateImageUrl() -> URL {
         var stringUrl = self.absoluteString
         stringUrl = stringUrl.replacingOccurrences(of: "\\/", with: "/")
@@ -28,5 +18,15 @@ extension URL {
             // Should add fix url
             return self
         }
+    }
+}
+
+extension Int {
+    func priceFormatter() -> String {
+        let nsNumber = self as NSNumber
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        guard let priceString = formatter.string(from: nsNumber) else { return "" }
+        return priceString
     }
 }

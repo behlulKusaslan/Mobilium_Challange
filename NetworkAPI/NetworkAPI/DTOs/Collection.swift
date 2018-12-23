@@ -9,13 +9,13 @@
 import Foundation
 
 public struct Collection: Decodable {
-    let cover : Cover?
-    let definition : String?
-    let id : Int?
-    let logo : Logo?
-    let shareUrl : String?
-    let start : String?
-    let title : String?
+    public let cover : Cover?
+    public let definition : String?
+    public let id : Int?
+    public let logo : Logo?
+    public let shareUrl : String?
+    public let start : String?
+    public let title : String?
     
     enum CodingKeys: String, CodingKey {
         case cover

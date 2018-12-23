@@ -9,30 +9,33 @@
 import Foundation
 
 public struct Product: Decodable {
-    let cargoTime: Int?
-    let category: Category?
-    let categoryId: Int?
-    let commentCount: Int?
-    let commissionRate: Int?
-    let definition: String?
-    let difference: String?
-    let id: Int?
-    let images: [Image]?
-    let isActive: Bool?
-    let isApproved: Bool?
-    let isCargoFree: Bool?
-    let isEditorChoice: Bool?
-    let isLiked: Bool?
-    let isNew: Bool?
-    let isOwner: Bool?
-    let likeCount: Int?
-    let oldPrice: Int?
-    let price: Int?
-    let shareUrl: String?
-    let shop: Shop?
-    let slug: String?
-    let stock: Int?
-    let title: String?
+    public let cargoTime: Int?
+    public let category: Category?
+    public let categoryId: Int?
+    public let commentCount: Int?
+    public let commissionRate: Int?
+    public let definition: String?
+    public let difference: String?
+    public let id: Int?
+    public let images: [Image]
+    public let isActive: Bool?
+    public let isApproved: Bool?
+    public let isCargoFree: Bool?
+    public let isEditorChoice: Bool?
+    public let isLiked: Bool?
+    public let isNew: Bool?
+    public let isOwner: Bool?
+    public let likeCount: Int?
+    public let oldPrice: Int?
+    private let price: Int
+    public var priceString: String {
+        return price.priceFormatter()
+    }
+    public let shareUrl: String?
+    public let shop: Shop
+    public let slug: String?
+    public let stock: Int?
+    public let title: String
     
     enum CodingKeys: String, CodingKey {
         case cargoTime = "cargo_time"
@@ -66,7 +69,10 @@ public struct Image: Decodable {
     let height : Int?
     let medium : Medium?
     let thumbnail : Thumbnail?
-    let url : String?
+    private let url: URL
+    public var imageUrl : URL {
+        return url.regulateImageUrl()
+    }
     let width : Int?
 }
 

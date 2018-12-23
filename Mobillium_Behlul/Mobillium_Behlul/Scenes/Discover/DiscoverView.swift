@@ -40,15 +40,40 @@ extension DiscoverView: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension DiscoverView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = discoverPresentation?.featureds.count else { return 0}
-        return count
+        return CellType.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        guard let featured = discoverPresentation?.featureds[indexPath.row] else { return cell }
-        cell.textLabel?.text = featured.title
-        cell.detailTextLabel?.text = featured.subtitle
-        return cell
+        switch indexPath.row {
+        case CellType.featured.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FeaturedTableViewCell") as? FeaturedTableViewCell ?? FeaturedTableViewCell()
+            guard let featureds = discoverPresentation?.featureds else { return cell }
+            cell.updateTableViewCell(featureds)
+            return cell
+        case CellType.newProduct.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NewProductsTableViewCell") as? NewProductsTableViewCell ?? NewProductsTableViewCell()
+            guard let products = discoverPresentation?.products else { return cell }
+            guard let title = discoverPresentation?.productTitle else { return cell }
+            cell.updateTableViewCell(products, title: title)
+            return cell
+        // TODO:
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case CellType.featured.rawValue: return 150
+        case CellType.newProduct.rawValue: return 230
+        default: return 0
+        }
+    }
+}
+
+// Mark: - CellType
+extension DiscoverView {
+    enum CellType: Int, CaseIterable {
+        case featured = 0, newProduct, categories, collections, editorShops, newShops
     }
 }
