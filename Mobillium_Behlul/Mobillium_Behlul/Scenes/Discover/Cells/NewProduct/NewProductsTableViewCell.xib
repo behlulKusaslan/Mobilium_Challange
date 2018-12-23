@@ -45,6 +45,9 @@
                     <state key="normal" title="Tümü">
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="allButtonTapped:" destination="-1" eventType="touchUpInside" id="Qtf-Jh-9Oj"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
