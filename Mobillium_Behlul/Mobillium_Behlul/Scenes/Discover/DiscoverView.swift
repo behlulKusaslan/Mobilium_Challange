@@ -53,6 +53,8 @@ extension DiscoverView: UITableViewDataSource {
             return CategoriesTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
         case CellType.collections.rawValue:
             return CollectionsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
+        case CellType.editorShops.rawValue:
+            return EditorShopsTableViewCellBuilder.make(with: discoverPresentation, for: tableView)
         // TODO:
         default:
             return UITableViewCell()
@@ -65,6 +67,7 @@ extension DiscoverView: UITableViewDataSource {
         case CellType.newProduct.rawValue: return 230
         case CellType.categories.rawValue: return 115
         case CellType.collections.rawValue: return 150
+        case CellType.editorShops.rawValue: return 250
         default: return 0
         }
     }

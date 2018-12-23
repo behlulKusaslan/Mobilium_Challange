@@ -12,7 +12,7 @@ public struct Shop: Decodable {
     public let commentCount : Int?
     public let cover : Cover
     public let createdAt : String?
-    public let definition : String?
+    public let definition : String
     public let followerCount : Int?
     public let id : Int?
     public let isEditorChoice : Bool?
@@ -23,6 +23,7 @@ public struct Shop: Decodable {
     public let productCount : Int?
     public let shareUrl : String?
     public let shopPaymentId : Int?
+    public let popularProducts: [PopularProducts]?
     public let shopRate : Int?
     public let slug : String?
     public let vacationMode : Int?
@@ -42,8 +43,13 @@ public struct Shop: Decodable {
         case productCount = "product_count"
         case shareUrl = "share_url"
         case shopPaymentId = "shop_payment_id"
+        case popularProducts = "popular_products"
         case shopRate = "shop_rate"
         case slug
         case vacationMode = "vacation_mode"
     }
+}
+
+public struct PopularProducts: Decodable {
+    public let images: [Image]
 }

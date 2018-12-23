@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditorShopsTableViewCell" customModule="Mobillium_Behlul" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="OWc-bX-aYi" id="3MC-xK-akN"/>
+                <outlet property="collectionView" destination="Sf3-wz-Ltw" id="740-Ik-g2c"/>
+                <outlet property="sectionTitle" destination="QoE-Lv-z5s" id="c67-vD-wFa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="E2Q-Qb-EXa">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWc-bX-aYi">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCZ-P8-rsq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zK5-vi-huP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoE-Lv-z5s">
+                    <rect key="frame" x="16" y="4.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeT-eb-zCN">
+                    <rect key="frame" x="313" y="0.0" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Sf3-wz-Ltw">
+                    <rect key="frame" x="0.0" y="31" width="375" height="169"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r3J-KT-ekX">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="TUK-0s-4Gb"/>
+                        <outlet property="delegate" destination="-1" id="zRR-hx-UWv"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OWc-bX-aYi" secondAttribute="bottom" id="7PX-Gg-SfT"/>
+                <constraint firstItem="eCZ-P8-rsq" firstAttribute="centerX" secondItem="OWc-bX-aYi" secondAttribute="centerX" id="99d-1O-W69"/>
+                <constraint firstItem="eCZ-P8-rsq" firstAttribute="height" secondItem="OWc-bX-aYi" secondAttribute="height" id="Bfu-Pb-0sh"/>
+                <constraint firstItem="3JW-ZQ-PBa" firstAttribute="trailing" secondItem="OWc-bX-aYi" secondAttribute="trailing" id="CBR-dH-FXa"/>
+                <constraint firstItem="QoE-Lv-z5s" firstAttribute="leading" secondItem="3JW-ZQ-PBa" secondAttribute="leading" constant="16" id="CFh-0A-N7C"/>
+                <constraint firstItem="eCZ-P8-rsq" firstAttribute="centerY" secondItem="OWc-bX-aYi" secondAttribute="centerY" id="EGe-7C-JBu"/>
+                <constraint firstItem="3JW-ZQ-PBa" firstAttribute="trailing" secondItem="JeT-eb-zCN" secondAttribute="trailing" constant="16" id="FE4-1A-NcR"/>
+                <constraint firstItem="JeT-eb-zCN" firstAttribute="top" secondItem="E2Q-Qb-EXa" secondAttribute="top" id="FFX-oT-x4q"/>
+                <constraint firstItem="Sf3-wz-Ltw" firstAttribute="leading" secondItem="3JW-ZQ-PBa" secondAttribute="leading" id="Kb4-bh-Wbe"/>
+                <constraint firstItem="Sf3-wz-Ltw" firstAttribute="top" secondItem="JeT-eb-zCN" secondAttribute="bottom" constant="1" id="MkO-aW-yqI"/>
+                <constraint firstItem="OWc-bX-aYi" firstAttribute="top" secondItem="E2Q-Qb-EXa" secondAttribute="top" id="OlF-SC-o2L"/>
+                <constraint firstItem="OWc-bX-aYi" firstAttribute="leading" secondItem="3JW-ZQ-PBa" secondAttribute="leading" id="Um5-ag-KsN"/>
+                <constraint firstAttribute="bottom" secondItem="Sf3-wz-Ltw" secondAttribute="bottom" id="dgk-ya-4mf"/>
+                <constraint firstItem="eCZ-P8-rsq" firstAttribute="width" secondItem="OWc-bX-aYi" secondAttribute="width" id="nkx-HZ-vDC"/>
+                <constraint firstItem="QoE-Lv-z5s" firstAttribute="centerY" secondItem="JeT-eb-zCN" secondAttribute="centerY" id="xdj-EC-5Rx"/>
+                <constraint firstItem="Sf3-wz-Ltw" firstAttribute="trailing" secondItem="3JW-ZQ-PBa" secondAttribute="trailing" id="zyg-dv-zXS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="3JW-ZQ-PBa"/>
+            <point key="canvasLocation" x="-154.40000000000001" y="-61.169415292353825"/>
+        </view>
+    </objects>
+</document>

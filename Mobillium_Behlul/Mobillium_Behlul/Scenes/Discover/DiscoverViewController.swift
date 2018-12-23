@@ -24,6 +24,8 @@ final class DiscoverViewController: UIViewController {
     private var categoriesTitle: String = ""
     private var collections: [VitrinovaCollection] = []
     private var collectionsTitle: String = ""
+    private var editorShops: [Shop] = []
+    private var editorShopsTitle: String = ""
     
     
     // Mark: - Lifecycle
@@ -59,7 +61,8 @@ final class DiscoverViewController: UIViewController {
                         strongSelf.collections = collections.collections
                     }
                     if let editorShops = result as? TopEditorShops {
-                        print(editorShops.title)
+                        strongSelf.editorShopsTitle = editorShops.title
+                        strongSelf.editorShops = editorShops.shops
                     }
                     if let newShops = result as? TopNewShops {
                         print(newShops.title)
@@ -79,6 +82,7 @@ final class DiscoverViewController: UIViewController {
         let productPresentationsArray = self.products.map(ProductPresentation.init)
         let categoriesPresentationArray = self.categories.map(CategoryPresentation.init)
         let collectionsPresentationArray = self.collections.map(CollectionPresentation.init)
+        let editorShopsPresentationArray = self.editorShops.map(EditorShopPresentation.init)
         
         // create base presentation
         let discoverPresentationArray = DiscoverPresentation.init(
@@ -88,7 +92,9 @@ final class DiscoverViewController: UIViewController {
             categoriesTitle: categoriesTitle,
             categories: categoriesPresentationArray,
             collectionsTitle: collectionsTitle,
-            collections: collectionsPresentationArray)
+            collections: collectionsPresentationArray,
+            editorShopsTitle: editorShopsTitle,
+            editorShops: editorShopsPresentationArray)
         
         self.customView.updateTableView(discoverPresentationArray)
     }

@@ -16,4 +16,6 @@ struct DiscoverPresentation {
     let categories: [CategoryPresentation]
     let collectionsTitle: String
     let collections: [CollectionPresentation]
+    let editorShopsTitle: String
+    let editorShops: [EditorShopPresentation]
 }
