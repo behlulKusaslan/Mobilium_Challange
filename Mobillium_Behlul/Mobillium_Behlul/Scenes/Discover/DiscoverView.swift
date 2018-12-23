@@ -12,6 +12,7 @@ final class DiscoverView: UIView {
     
     // Outlets
     @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // Variables
     private var discoverPresentation: DiscoverPresentation?
@@ -30,6 +31,13 @@ extension DiscoverView: DiscoverViewProtocol {
     
     func setLoading(_ isloading: Bool) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = isloading
+        tableView.isHidden = isloading
+        if isloading {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+        activityIndicator.isHidden = !isloading
     }
     
 }

@@ -31,15 +31,27 @@ final class DiscoverViewController: UIViewController {
     private var editorShops: [Shop] = []
     private var editorShopsTitle: String = ""
     
+    var state = State.loading {
+        didSet {
+            switch state {
+            case .loading:
+                customView.setLoading(true)
+                getDiscoverData()
+            default:
+                customView.setLoading(false)
+            }
+        }
+    }
     
     // Mark: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Vitrinova"
+        state = .loading
         
-        self.customView.setLoading(true)
-        getDiscoverData()
+//        self.customView.setLoading(true)
+//        getDiscoverData()
     }
     
     // MARK: - Functions
@@ -48,6 +60,7 @@ final class DiscoverViewController: UIViewController {
             guard let strongSelf = self else { return }
             switch result {
             case .success(let value):
+                strongSelf.state = .ready
                 for result in value.responses {
                     if let topFeatured = result as? TopFeatured {
                         strongSelf.featureds = topFeatured.featured
@@ -74,6 +87,7 @@ final class DiscoverViewController: UIViewController {
                 }
                 strongSelf.updateView()
             case .failure(let error):
+                strongSelf.state = .error
                 print(error)
             }
             self?.customView.setLoading(false)
@@ -109,5 +123,13 @@ extension DiscoverViewController: DiscoverViewControllerDelegate {
     func goToDetailView(with state: DiscoverDetailView.State) {
         let viewController = DiscoverDetailBuilder.make(with: state)
         show(viewController, sender: nil)
+    }
+}
+
+extension DiscoverViewController {
+    enum State {
+        case loading
+        case ready
+        case error
     }
 }
