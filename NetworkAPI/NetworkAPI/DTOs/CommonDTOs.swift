@@ -37,7 +37,7 @@ public struct Thumbnail: Decodable {
     }
 }
 
-public struct ShopCategory: Decodable {
+public struct VitrinovaCategory: Decodable {
     public let id : Int
     public let name : String
     public let order : Int?

@@ -10,7 +10,7 @@ import Foundation
 
 public struct Product: Decodable {
     public let cargoTime: Int?
-    public let category: ShopCategory?
+    public let category: VitrinovaCategory?
     public let categoryId: Int?
     public let commentCount: Int?
     public let commissionRate: Int?

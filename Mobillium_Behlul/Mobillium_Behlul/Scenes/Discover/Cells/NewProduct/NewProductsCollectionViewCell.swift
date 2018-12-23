@@ -30,9 +30,10 @@ class NewProductsCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.titleLabel.text = ""
-        self.subtitleLable.text = ""
-        self.priceLabel.text = ""
+        self.imageView.image = nil
+        self.titleLabel.text = nil
+        self.subtitleLable.text = nil
+        self.priceLabel.text = nil
     }
 
 }

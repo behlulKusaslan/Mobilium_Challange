@@ -24,3 +24,7 @@ protocol NewProductsTableViewCellProtocol {
 protocol CategoryTableViewCellProtocol {
     func updateTableView(_ categories: [CategoryPresentation], title: String)
 }
+
+protocol CollectionsTableViewCellProtocol {
+    func updaetTableView(_ collections: [CollectionPresentation], title: String)
+}

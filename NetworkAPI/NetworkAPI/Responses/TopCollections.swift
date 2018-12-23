@@ -10,7 +10,7 @@ import Foundation
 
 public class TopCollections: BaseResponse {
     
-    public let collections: [Collection]
+    public let collections: [VitrinovaCollection]
     
     private enum CodingKeys: String, CodingKey {
         case collections
@@ -18,7 +18,7 @@ public class TopCollections: BaseResponse {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.collections = try container.decode([Collection].self, forKey: .collections)
+        self.collections = try container.decode([VitrinovaCollection].self, forKey: .collections)
         try super.init(from: decoder)
     }
 }

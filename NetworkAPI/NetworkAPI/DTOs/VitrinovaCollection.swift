@@ -8,14 +8,14 @@
 
 import Foundation
 
-public struct Collection: Decodable {
-    public let cover : Cover?
-    public let definition : String?
+public struct VitrinovaCollection: Decodable {
+    public let cover : Cover
+    public let definition : String
     public let id : Int?
     public let logo : Logo?
     public let shareUrl : String?
     public let start : String?
-    public let title : String?
+    public let title : String
     
     enum CodingKeys: String, CodingKey {
         case cover

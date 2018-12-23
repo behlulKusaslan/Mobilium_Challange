@@ -18,10 +18,13 @@ final class DiscoverViewController: UIViewController {
     // Proporties
     var service = DiscoverService()
     private var featureds: [Featured] = []
-    private var productsTitle: String = ""
     private var products: [Product] = []
-    private var categories: [ShopCategory] = []
+    private var productsTitle: String = ""
+    private var categories: [VitrinovaCategory] = []
     private var categoriesTitle: String = ""
+    private var collections: [VitrinovaCollection] = []
+    private var collectionsTitle: String = ""
+    
     
     // Mark: - Lifecycle
     override func viewDidLoad() {
@@ -52,7 +55,8 @@ final class DiscoverViewController: UIViewController {
                         strongSelf.categories = categories.categories
                     }
                     if let collections = result as? TopCollections {
-                        print(collections.title)
+                        strongSelf.collectionsTitle = collections.title
+                        strongSelf.collections = collections.collections
                     }
                     if let editorShops = result as? TopEditorShops {
                         print(editorShops.title)
@@ -74,6 +78,7 @@ final class DiscoverViewController: UIViewController {
         let featuredPresentationsArray = self.featureds.map(FeaturedPresentation.init)
         let productPresentationsArray = self.products.map(ProductPresentation.init)
         let categoriesPresentationArray = self.categories.map(CategoryPresentation.init)
+        let collectionsPresentationArray = self.collections.map(CollectionPresentation.init)
         
         // create base presentation
         let discoverPresentationArray = DiscoverPresentation.init(
@@ -81,7 +86,9 @@ final class DiscoverViewController: UIViewController {
             productTitle: productsTitle,
             products: productPresentationsArray,
             categoriesTitle: categoriesTitle,
-            categories: categoriesPresentationArray)
+            categories: categoriesPresentationArray,
+            collectionsTitle: collectionsTitle,
+            collections: collectionsPresentationArray)
         
         self.customView.updateTableView(discoverPresentationArray)
     }

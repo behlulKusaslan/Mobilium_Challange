@@ -15,7 +15,7 @@ struct CategoryPresentation {
 }
 
 extension CategoryPresentation {
-    init(category: ShopCategory) {
+    init(category: VitrinovaCategory) {
         
         self.init(imageUrl: category.logo?.medium.imageUrl ?? URL(string: "")!,
                   title: category.name)

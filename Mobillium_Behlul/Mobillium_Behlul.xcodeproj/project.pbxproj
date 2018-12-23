@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1762B321CFF823000C3E34 /* CollectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1762B221CFF823000C3E34 /* CollectionsTableViewCell.swift */; };
+		4F1762B521CFF82E000C3E34 /* CollectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F1762B421CFF82E000C3E34 /* CollectionsTableViewCell.xib */; };
+		4F1762B821CFF84E000C3E34 /* CollectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1762B621CFF84E000C3E34 /* CollectionsCollectionViewCell.swift */; };
+		4F1762B921CFF84E000C3E34 /* CollectionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F1762B721CFF84E000C3E34 /* CollectionsCollectionViewCell.xib */; };
+		4F1762BB21CFF9CF000C3E34 /* CollectionPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1762BA21CFF9CF000C3E34 /* CollectionPresentation.swift */; };
 		4F2674B621CC2FC500EE4EBC /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2674B521CC2FC500EE4EBC /* Kingfisher.framework */; };
 		4F2674BE21CC346200EE4EBC /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674BD21CC346200EE4EBC /* AppRouter.swift */; };
 		4F2674C021CC34D500EE4EBC /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2674BF21CC34D500EE4EBC /* DiscoverView.swift */; };
@@ -78,6 +83,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F1762B221CFF823000C3E34 /* CollectionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsTableViewCell.swift; sourceTree = "<group>"; };
+		4F1762B421CFF82E000C3E34 /* CollectionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionsTableViewCell.xib; sourceTree = "<group>"; };
+		4F1762B621CFF84E000C3E34 /* CollectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F1762B721CFF84E000C3E34 /* CollectionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionsCollectionViewCell.xib; sourceTree = "<group>"; };
+		4F1762BA21CFF9CF000C3E34 /* CollectionPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPresentation.swift; sourceTree = "<group>"; };
 		4F2674B521CC2FC500EE4EBC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Vendor/Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		4F2674BD21CC346200EE4EBC /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		4F2674BF21CC34D500EE4EBC /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
@@ -124,6 +134,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F1762B121CFF7F5000C3E34 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				4F1762B221CFF823000C3E34 /* CollectionsTableViewCell.swift */,
+				4F1762B421CFF82E000C3E34 /* CollectionsTableViewCell.xib */,
+				4F1762B621CFF84E000C3E34 /* CollectionsCollectionViewCell.swift */,
+				4F1762B721CFF84E000C3E34 /* CollectionsCollectionViewCell.xib */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
 		4F2674B821CC33A700EE4EBC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +187,7 @@
 				4F2674CE21CC3ABB00EE4EBC /* FeaturedPresentation.swift */,
 				4F734C3E21CD11F70005903E /* ProductPresentation.swift */,
 				4FAE409D21CFCC9100E81F2F /* CategoryPresentation.swift */,
+				4F1762BA21CFF9CF000C3E34 /* CollectionPresentation.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -206,6 +228,7 @@
 				4F734C4221CD19C30005903E /* Featured */,
 				4F734C4321CD19D90005903E /* NewProduct */,
 				4FAE409321CFCB6A00E81F2F /* Categories */,
+				4F1762B121CFF7F5000C3E34 /* Collections */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -379,7 +402,9 @@
 				4FAE409C21CFCBBB00E81F2F /* CategoriesCollectionViewCell.xib in Resources */,
 				4F734C4521CD19FA0005903E /* NewProductsTableViewCell.xib in Resources */,
 				4F5252C721CEA37E0057ED61 /* NewProductsCollectionViewCell.xib in Resources */,
+				4F1762B521CFF82E000C3E34 /* CollectionsTableViewCell.xib in Resources */,
 				4F8199BD21CB756900264D6A /* Assets.xcassets in Resources */,
+				4F1762B921CFF84E000C3E34 /* CollectionsCollectionViewCell.xib in Resources */,
 				4FAE409821CFCBA200E81F2F /* CategoriesTableViewCell.xib in Resources */,
 				4F734C3B21CD08420005903E /* SlideView.xib in Resources */,
 				4F2674C221CC351B00EE4EBC /* Discover.storyboard in Resources */,
@@ -422,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1762BB21CFF9CF000C3E34 /* CollectionPresentation.swift in Sources */,
 				4F734C3721CD03660005903E /* FeaturedTableViewCell.swift in Sources */,
 				4FAE409621CFCB9700E81F2F /* CategoriesTableViewCell.swift in Sources */,
 				4FAE409B21CFCBBB00E81F2F /* CategoriesCollectionViewCell.swift in Sources */,
@@ -434,12 +460,14 @@
 				4F734C3D21CD08500005903E /* SlideView.swift in Sources */,
 				4F2674CF21CC3ABB00EE4EBC /* FeaturedPresentation.swift in Sources */,
 				4F734C4121CD19BD0005903E /* NewProductsTableViewCell.swift in Sources */,
+				4F1762B821CFF84E000C3E34 /* CollectionsCollectionViewCell.swift in Sources */,
 				4F2674C821CC357D00EE4EBC /* DiscoverContracts.swift in Sources */,
 				4F734C3F21CD11F70005903E /* ProductPresentation.swift in Sources */,
 				4F734C3421CD03070005903E /* XibLoadable.swift in Sources */,
 				4F2674C421CC354300EE4EBC /* DiscoverBuilder.swift in Sources */,
 				4F2674C021CC34D500EE4EBC /* DiscoverView.swift in Sources */,
 				4FAE409E21CFCC9100E81F2F /* CategoryPresentation.swift in Sources */,
+				4F1762B321CFF823000C3E34 /* CollectionsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
