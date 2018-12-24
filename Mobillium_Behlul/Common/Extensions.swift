@@ -1,8 +1,8 @@
 //
-//  Extentions.swift
-//  NetworkAPI
+//  Extensions.swift
+//  Mobillium_Behlul
 //
-//  Created by behlul on 21.12.2018.
+//  Created by behlul on 24.12.2018.
 //  Copyright © 2018 behlul. All rights reserved.
 //
 
@@ -15,18 +15,25 @@ extension URL {
         if let regulatedUrl = URL(string: stringUrl) {
             return regulatedUrl
         } else {
-            // Should add fix url
+            // May add fix url
             return self
         }
     }
 }
 
 extension Int {
-    func priceFormatter() -> String {
-        let nsNumber = self as NSNumber
+    static let priceFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "tr_TR")
         formatter.numberStyle = .currency
-        guard let priceString = formatter.string(from: nsNumber) else { return "" }
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 0
+        return formatter
+    }()
+    
+    var priceFormatted: String {
+        let nsNumber = self as NSNumber
+        guard let priceString = Int.priceFormatter.string(from: nsNumber) else { return "" }
         return priceString
     }
 }

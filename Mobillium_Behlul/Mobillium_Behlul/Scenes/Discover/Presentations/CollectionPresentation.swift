@@ -17,7 +17,8 @@ struct CollectionPresentation {
 
 extension CollectionPresentation {
     init(collection: VitrinovaCollection) {
-        self.init(imageUrl: collection.cover.medium.imageUrl,
+        let imageUrl = collection.cover.medium.url.regulateImageUrl()
+        self.init(imageUrl: imageUrl,
                   title: collection.title,
                   subtitle: collection.definition)
     }

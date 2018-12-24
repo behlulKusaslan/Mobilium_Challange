@@ -17,7 +17,7 @@ struct FeaturedPresentation {
 
 extension FeaturedPresentation {
     init(featured: Featured) {
-        let imageUrl = featured.cover.imageUrl
+        let imageUrl = featured.cover.url.regulateImageUrl()
         self.init(imageUrl: imageUrl, title: featured.title, subtitle: featured.subTitle)
     }
 }

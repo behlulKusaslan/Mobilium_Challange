@@ -19,13 +19,13 @@ struct EditorShopPresentation {
 
 extension EditorShopPresentation {
     init(shop: Shop) {
-        let logoUrl = shop.cover.medium.imageUrl
+        let logoUrl = shop.cover.medium.url.regulateImageUrl()
         let images = [
-            shop.popularProducts?[0].images.first?.medium?.imageUrl ?? URL(string: "")!,
-            shop.popularProducts?[1].images.first?.medium?.imageUrl ?? URL(string: "")!,
-            shop.popularProducts?[2].images.first?.medium?.imageUrl ?? URL(string: "")!
+            shop.popularProducts?[0].images.first?.medium?.url.regulateImageUrl() ?? URL(string: "")!,
+            shop.popularProducts?[1].images.first?.medium?.url.regulateImageUrl() ?? URL(string: "")!,
+            shop.popularProducts?[2].images.first?.medium?.url.regulateImageUrl() ?? URL(string: "")!
         ]
-        let backgroundImage = shop.cover.medium.imageUrl
+        let backgroundImage = shop.cover.medium.url.regulateImageUrl()
         self.init(logoUrl: logoUrl,
                   title: shop.name,
                   subtitle: shop.definition,

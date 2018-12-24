@@ -11,10 +11,7 @@ import Foundation
 public struct Cover: Decodable {
     public let width: Int
     public let height: Int
-    private let url: URL
-    public var imageUrl : URL {
-        return url.regulateImageUrl()
-    }
+    public let url: URL
     public let medium: Medium
     public let thumbnail: Thumbnail
 }
@@ -22,19 +19,13 @@ public struct Cover: Decodable {
 public struct Medium: Decodable {
     public let width: Int
     public let height: Int
-    private let url: URL
-    public var imageUrl : URL {
-        return url.regulateImageUrl()
-    }
+    public let url: URL
 }
 
 public struct Thumbnail: Decodable {
     public let width: Int
     public let height: Int
-    private let url: URL
-    public var imageUrl : URL {
-        return url.regulateImageUrl()
-    }
+    public let url: URL
 }
 
 public struct VitrinovaCategory: Decodable {

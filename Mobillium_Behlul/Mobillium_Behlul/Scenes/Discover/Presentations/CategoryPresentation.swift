@@ -16,8 +16,8 @@ struct CategoryPresentation {
 
 extension CategoryPresentation {
     init(category: VitrinovaCategory) {
-        
-        self.init(imageUrl: category.logo?.medium.imageUrl ?? URL(string: "")!,
+        let imageUrl = category.logo?.medium.url.regulateImageUrl()
+        self.init(imageUrl: imageUrl ?? URL(string: "")!,
                   title: category.name)
     }
 }

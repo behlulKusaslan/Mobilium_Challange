@@ -27,10 +27,7 @@ public struct Product: Decodable {
     public let isOwner: Bool?
     public let likeCount: Int?
     public let oldPrice: Int?
-    private let price: Int
-    public var priceString: String {
-        return price.priceFormatter()
-    }
+    public let price: Int
     public let shareUrl: String?
     public let shop: Shop
     public let slug: String?
@@ -69,10 +66,7 @@ public struct Image: Decodable {
     public let height : Int?
     public let medium : Medium?
     public let thumbnail : Thumbnail?
-    private let url: URL
-    public var imageUrl : URL {
-        return url.regulateImageUrl()
-    }
+    public let url: URL
     public let width : Int?
 }
 

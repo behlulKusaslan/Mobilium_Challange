@@ -18,10 +18,12 @@ struct ProductPresentation {
 
 extension ProductPresentation {
     init(product: Product) {
+        let price = product.price.priceFormatted
+        let imageUrl = product.images.first?.url.regulateImageUrl()
         self.init(
-            imageUrl: product.images.first?.imageUrl ?? URL(string: "")!,
+            imageUrl: imageUrl ?? URL(string: "")!,
             title: product.title,
             subtitle: product.shop.name,
-            price: product.priceString)
+            price: price)
     }
 }
